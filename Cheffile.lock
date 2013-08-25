@@ -1,9 +1,9 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    apt (2.1.0)
-    aws (0.101.2)
-    build-essential (1.4.0)
+    apt (2.1.1)
+    aws (0.101.4)
+    build-essential (1.4.2)
     chef_handler (1.1.4)
     composer (0.0.5)
       php (>= 0.0.0)
@@ -81,7 +81,7 @@ GIT
 GIT
   remote: https://github.com/andygrunwald/chef-typo3analytics
   ref: master
-  sha: 5a857ee101c22d9ea9baf045a7df1761d8596a0b
+  sha: a519949c9c4335324d0dcb1b9161d27035aec6dd
   specs:
     typo3analytics (1.2.4)
       composer (>= 0.0.0)
