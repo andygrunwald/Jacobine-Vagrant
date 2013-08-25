@@ -1,14 +1,14 @@
 name "application"
 description "The application role. Installs the required application stack"
 
-run_list "recipe[repositoryhandler]",
-		 "recipe[cvsanaly]",
-		 "recipe[supervisor]",
+run_list "recipe[supervisor]",
 		 "recipe[rabbitmq]",
 		 "recipe[rabbitmq::mgmt_console]",
 		 "recipe[rabbitmq::virtualhost_management]",
 		 "recipe[rabbitmq::user_management]",
 		 "recipe[typo3analytics]",
+		 "recipe[repositoryhandler]",
+		 "recipe[cvsanaly]",
 		 "recipe[github-linguist]"
 
 override_attributes(
