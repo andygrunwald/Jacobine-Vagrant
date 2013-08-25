@@ -36,9 +36,13 @@ The login credentials for the used services
 
 ### MySQL
 
+#### root user
+
 * Port: 3306
 * Username: root
 * Password:
+
+#### analysis user
 
 * Port: 3306
 * Username: analysis
