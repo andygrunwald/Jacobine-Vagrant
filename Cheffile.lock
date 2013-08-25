@@ -55,33 +55,33 @@ SITE
 GIT
   remote: https://github.com/andygrunwald/chef-cvsanaly
   ref: master
-  sha: 9430fb50bed7e8280554b87cab0b5baf601f0026
+  sha: c20e91e8def1f76f75770dcc4afad60e9be6bbdd
   specs:
-    cvsanaly (1.0.1)
+    cvsanaly (1.0.2)
       repositoryhandler (>= 0.0.0)
 
 GIT
   remote: https://github.com/andygrunwald/chef-github-linguist
   ref: master
-  sha: 95f18b841805cc25bed2bb61604d087d7c661528
+  sha: 0a8f1c2645c9a8c32a195999730d67234cb1d961
   specs:
-    github-linguist (1.0.1)
+    github-linguist (1.0.2)
       git (>= 0.0.0)
       rubygems (>= 0.0.0)
 
 GIT
   remote: https://github.com/andygrunwald/chef-repositoryhandler
   ref: master
-  sha: aea1430d2ee04b8e989d5b3a34c5bfd885579cc3
+  sha: dcb72de898be8454e12ab0b22610a9ed2d650827
   specs:
-    repositoryhandler (1.0.1)
+    repositoryhandler (1.0.2)
       git (>= 0.0.0)
       python (>= 0.0.0)
 
 GIT
   remote: https://github.com/andygrunwald/chef-typo3analytics
   ref: master
-  sha: 13314b07633af72769d13226594d8282a3b2a9f0
+  sha: e74f6b71a52230e0546abfaae00cfa0a81d5de17
   specs:
     typo3analytics (1.3.0)
       composer (>= 0.0.0)
