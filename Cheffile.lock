@@ -23,6 +23,7 @@ SITE
       runit (>= 1.0.0)
       windows (>= 0.0.0)
       yum (>= 0.0.0)
+    logrotate (1.3.0)
     mysql (3.0.4)
       build-essential (> 1.1.0)
       openssl (>= 0.0.0)
@@ -81,11 +82,12 @@ GIT
 GIT
   remote: https://github.com/andygrunwald/chef-typo3analytics
   ref: master
-  sha: 7ecd4eba07e5f0b2258596cb21f7bb49d95dce89
+  sha: db0055d9a36594b127edc404867ce8b93ab3acb0
   specs:
-    typo3analytics (1.3.4)
+    typo3analytics (1.3.5)
       composer (>= 0.0.0)
       database (>= 0.0.0)
+      logrotate (>= 0.0.0)
       mysql (>= 0.0.0)
       supervisor (>= 0.0.0)
 
