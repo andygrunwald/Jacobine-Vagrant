@@ -13,12 +13,13 @@ run_list "recipe[supervisor]",
 
 override_attributes(
 	:supervisor => {
-		:inet_port => "*:9001",
+		:inet_port => "192.168.33.55:9001",
 		:inet_username => "analysis",
 		:inet_password => "analysis"
 	},
 	:rabbitmq => {
-		:version => '3.2.2',
+		:version => '3.2.3',
+		:address => '192.168.33.55',
 		:virtualhosts => ['analysis'],
 		:enabled_users => [{
 			:name => "analysis",
@@ -34,19 +35,13 @@ override_attributes(
 		:disabled_users => ['guest']
 	},
 	:repositoryhandler => {
-		:repository => "git://github.com/andygrunwald/RepositoryHandler.git",
-		:version => "master",
 		:destination => '/var/www/analysis/tools/MetricsGrimoire/RepositoryHandler'
 	},
 	:cvsanaly => {
-		:repository => "git://github.com/andygrunwald/CVSAnalY.git",
-		:version => "master",
 		:destination => '/var/www/analysis/tools/MetricsGrimoire/CVSAnalY'
 	},
 	:github_linguist => {
 		:install_method => "source",
-		:path => "/var/www/analysis/tools/github-linguist",
-		:repository => "git://github.com/andygrunwald/linguist.git",
-		:branch => "master"
+		:path => "/var/www/analysis/tools/github-linguist"
 	}
 )
