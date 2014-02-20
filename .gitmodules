@@ -1,3 +1,0 @@
-[submodule "Application"]
-	path = Application
-	url = git://github.com/andygrunwald/TYPO3-Analytics.git
