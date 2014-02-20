@@ -1,33 +1,33 @@
 # TYPO3-Analytics (Vagrant setup)
 
-This is a vagrant setup for the [TYPO3 Analytics](https://github.com/andygrunwald/TYPO3-Analytics) project. For more details please have a look at the project repository.
+This is a [Vagrant](http://www.vagrantup.com/) setup for the [TYPO3 Analytics](https://github.com/andygrunwald/TYPO3-Analytics) project.
 
-The fill application and library stack is bundled into a easy to use virtual machine.
+The full application and library stack is bundled into a easy to use virtual machine.
+This repository only contains the (complex) setup of [TYPO3 Analytics](https://github.com/andygrunwald/TYPO3-Analytics).
+This can be used to development or showcase.
 
-*ATTENTION*: This project is highly under development and can be completely change during development. But contribution is already welcome :)
+*ATTENTION*:
+This project is highly under development and can be change during development completely.
+But contribution is already welcome :)
 
 ## Requirements
 
 To use this project you have to install the listed requirements:
 
+* [Virtualbox](https://www.virtualbox.org/) or [VMWare](http://www.vmware.com/)
 * [Vagrant](http://www.vagrantup.com/)
 * [librarian-chef](https://github.com/applicationsonline/librarian-chef)
 
 ## Installation
 
-Short note: The SSH-Steps are necessary to use Gerrit as data source
-
-* Clone it (`git clone --recursive git://github.com/andygrunwald/TYPO3-Analytics-Vagrant.git`)
-* Switch submodule to master (`git submodule foreach --recursive git checkout master`)
+* Check it out (`git clone https://github.com/andygrunwald/TYPO3-Analytics-Vagrant.git`)
 * Switch to cloned directory (`cd TYPO3-Analytics-Vagrant`)
-* Install Chef cookbooks via librarian-chef (`librarian-chef install`)
-* Copy `Application/Config/config.yml.dist` to `Application/Config/config.yml` and add your settings (`cp Application/Config/config.yml.dist Application/Config/config.yml`)
-* Copy `Application/Config/gerrit-review.typo3.org.yml.dist` to `Application/Config/gerrit-review.typo3.org.yml` and add your settings (`cp Application/Config/gerrit-review.typo3.org.yml.dist Application/Config/gerrit-review.typo3.org.yml`)
-* Copy your SSH public and private key to `Application/Config/` for Gerrit SSH API
+* Check out the [application](https://github.com/andygrunwald/TYPO3-Analytics) (`git clone https://github.com/andygrunwald/TYPO3-Analytics.git Application`)
+* Install Chef cookbooks via [librarian-chef](https://github.com/applicationsonline/librarian-chef) (`librarian-chef install`)
+* [Configure the application](https://github.com/andygrunwald/TYPO3-Analytics/wiki/Configure)
 * Start the application (`vagrant up`)
+* Take a break or a coffee (or both ;))
 * Login into the virtual machine (`vagrant ssh`)
-* Enter `ssh-add` and enter the passphrase for your SSH key
-* Execute `/usr/bin/ssh -i /home/vagrant/.ssh/id_rsa -p 29418 {CONFIGURED USERNAME}@review.typo3.org gerrit` to add server finger print to known ssh server
 * Enjoy
 
 ## Access to services in VM
@@ -63,15 +63,17 @@ The login credentials for the used services
 
 ## Contributing
 
-* Fork and clone it (`git clone git://github.com/andygrunwald/TYPO3-Analytics-Vagrant.git`)
+* Fork and clone it (`git clone https://github.com/andygrunwald/TYPO3-Analytics-Vagrant.git`)
 * Create your feature branch (`git checkout -b my-new-feature`)
 * Make your changes (hack hack hack)
 * Commit your changes (`git commit -am 'Add some feature'`)
 * Push to the branch (`git push origin my-new-feature`)
 * Create new Pull Request
 
+A more detailed guide can be found at githubs [Fork A Repo](https://help.github.com/articles/fork-a-repo).
+
 ## Questions / Contact / Feedback
 
-If you got questions, feedback or want to drink a beer and talk about this project just contact me.
-Write me an email (see my Github-profile for this) or tweet me: [@andygrunwald](http://twitter.com/andygrunwald).
-And of course you can just open an issue here on github.
+If you got *any kind of* questions, feedback or want to drink a beer and talk about this project just contact me.
+Write me an email (written on my [Github-profile](https://github.com/andygrunwald)) or tweet me: [@andygrunwald](http://twitter.com/andygrunwald).
+And of course you can just [open an issue](https://github.com/andygrunwald/TYPO3-Analytics-Vagrant/issues) here at github.
