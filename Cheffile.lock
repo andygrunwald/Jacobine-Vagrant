@@ -1,7 +1,10 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    apache2 (1.8.14)
+    apache2 (1.9.0)
+      iptables (>= 0.0.0)
+      logrotate (>= 0.0.0)
+      pacman (>= 0.0.0)
     apt (2.3.8)
     aws (2.0.0)
     build-essential (1.4.2)
@@ -28,12 +31,14 @@ SITE
       yum-epel (>= 0.0.0)
     iis (2.0.0)
       windows (>= 1.2.6)
+    iptables (0.12.0)
     logrotate (1.5.0)
     mysql (4.0.20)
       build-essential (~> 1.4)
       openssl (~> 1.1)
     openssl (1.1.0)
-    php (1.3.12)
+    pacman (1.1.1)
+    php (1.3.14)
       build-essential (>= 0.0.0)
       iis (>= 0.0.0)
       mysql (>= 0.0.0)
@@ -54,7 +59,6 @@ SITE
       build-essential (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
-    sudo (2.5.0)
     vim (1.1.2)
     windows (1.30.0)
       chef_handler (>= 0.0.0)
@@ -96,15 +100,14 @@ GIT
 GIT
   remote: https://github.com/andygrunwald/chef-typo3analytics
   ref: master
-  sha: d5bc85537c15c30a514eebc19705ec6374f9bcb3
+  sha: 9291266f9bb6c3111f3bcc975cc374cd44e6cd57
   specs:
-    typo3analytics (1.6.3)
+    typo3analytics (2.0.0)
       apache2 (>= 0.0.0)
       composer (>= 0.0.0)
       database (>= 0.0.0)
       logrotate (>= 0.0.0)
       mysql (>= 0.0.0)
-      sudo (>= 0.0.0)
       supervisor (>= 0.0.0)
 
 GIT
