@@ -7,7 +7,7 @@ run_list "recipe[apt]",
 		 "recipe[vim]"
 
 override_attributes(
-	:build_essential => {
-		:compiletime => true
+	:'build-essential' => {
+		:compile_time => true
 	}
 )
