@@ -35,7 +35,7 @@ SITE
       windows (>= 1.2.6)
     iptables (0.13.2)
     logrotate (1.5.0)
-    mysql (5.1.6)
+    mysql (5.1.8)
     mysql-chef_gem (0.0.2)
       build-essential (>= 0.0.0)
       mysql (>= 0.0.0)
@@ -77,26 +77,26 @@ SITE
 GIT
   remote: https://github.com/andygrunwald/chef-cvsanaly
   ref: master
-  sha: 019a6c1daf04ac1203f673769876efe34d9b42fc
+  sha: e65d4eae0391d09344460391a00309978f1b7382
   specs:
-    cvsanaly (1.1.0)
+    cvsanaly (1.1.1)
       repositoryhandler (>= 0.0.0)
 
 GIT
   remote: https://github.com/andygrunwald/chef-github-linguist
   ref: master
-  sha: 2816b3bf7304fbfef106b5c8c542c966ec481d9f
+  sha: ab34eb30896e68bf1620660db493877583cd86f8
   specs:
-    github-linguist (1.0.3)
+    github-linguist (1.0.5)
       git (>= 0.0.0)
       rubygems (>= 0.0.0)
 
 GIT
   remote: https://github.com/andygrunwald/chef-repositoryhandler
   ref: master
-  sha: 4a8136a6610ea35f6c13ca455c828d9f1362491b
+  sha: 97cb4e95c724c4460b1845dcd15f7417ef7b3ed1
   specs:
-    repositoryhandler (1.1.0)
+    repositoryhandler (1.1.1)
       git (>= 0.0.0)
       python (>= 0.0.0)
 
