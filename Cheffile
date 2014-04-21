@@ -8,6 +8,9 @@ cookbook 'apt'
 cookbook 'build-essential'
 cookbook 'git'
 cookbook 'vim'
+cookbook 'dotdeb',
+	:git => "https://github.com/ffuenf/chef-dotdeb",
+	:ref => "master"
 
 # Role: web
 cookbook 'python'

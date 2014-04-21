@@ -103,15 +103,23 @@ GIT
 GIT
   remote: https://github.com/andygrunwald/chef-typo3analytics
   ref: master
-  sha: 38bde84464a9c82f59291abae78cc14fbb1d532c
+  sha: 7e825a5f7d3f5a1b4c848d6345cb079a69b6c426
   specs:
-    typo3analytics (2.1.1)
+    typo3analytics (2.1.2)
       apache2 (>= 0.0.0)
       composer (>= 0.0.0)
       database (>= 0.0.0)
       logrotate (>= 0.0.0)
       mysql (>= 0.0.0)
       supervisor (>= 0.0.0)
+
+GIT
+  remote: https://github.com/ffuenf/chef-dotdeb
+  ref: master
+  sha: 1ec0bacdf6b753df1e6bf759e879d7a0dfc14154
+  specs:
+    dotdeb (0.0.8)
+      apt (>= 0.0.0)
 
 GIT
   remote: https://github.com/poise/supervisor
@@ -126,6 +134,7 @@ DEPENDENCIES
   build-essential (>= 0)
   composer (>= 0)
   cvsanaly (>= 0)
+  dotdeb (>= 0)
   git (>= 0)
   github-linguist (>= 0)
   mysql (>= 0)
