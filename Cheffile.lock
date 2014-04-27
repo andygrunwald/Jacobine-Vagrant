@@ -1,17 +1,17 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    apache2 (1.10.2)
+    apache2 (1.10.4)
       iptables (>= 0.0.0)
       logrotate (>= 0.0.0)
       pacman (>= 0.0.0)
-    apt (2.3.8)
-    aws (2.1.1)
+    apt (2.3.10)
+    aws (2.2.0)
     build-essential (2.0.0)
     chef_handler (1.1.6)
     composer (1.0.0)
       php (>= 0.0.0)
-    database (2.1.6)
+    database (2.1.8)
       aws (>= 0.0.0)
       mysql (>= 5.0.0)
       mysql-chef_gem (>= 0.0.0)
@@ -24,18 +24,18 @@ SITE
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
       yum-erlang_solutions (>= 0.0.0)
-    git (4.0.0)
+    git (4.0.2)
       build-essential (>= 0.0.0)
       dmg (>= 0.0.0)
       runit (>= 1.0.0)
       windows (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
-    iis (2.1.0)
+    iis (2.1.2)
       windows (>= 1.2.6)
     iptables (0.13.2)
     logrotate (1.5.0)
-    mysql (5.1.8)
+    mysql (5.2.2)
     mysql-chef_gem (0.0.2)
       build-essential (>= 0.0.0)
       mysql (>= 0.0.0)
@@ -55,7 +55,7 @@ SITE
     python (1.4.6)
       build-essential (>= 0.0.0)
       yum-epel (>= 0.0.0)
-    rabbitmq (3.1.0)
+    rabbitmq (3.2.0)
       erlang (>= 0.9.0)
     rubygems (0.3.0)
     runit (1.5.10)
@@ -77,9 +77,9 @@ SITE
 GIT
   remote: https://github.com/andygrunwald/chef-cvsanaly
   ref: master
-  sha: e65d4eae0391d09344460391a00309978f1b7382
+  sha: cf571eacdf7056afbc00da9f43a6a717c17bf952
   specs:
-    cvsanaly (1.1.1)
+    cvsanaly (1.2.0)
       repositoryhandler (>= 0.0.0)
 
 GIT
@@ -92,20 +92,11 @@ GIT
       rubygems (>= 0.0.0)
 
 GIT
-  remote: https://github.com/andygrunwald/chef-repositoryhandler
+  remote: https://github.com/andygrunwald/chef-jacobine.git
   ref: master
-  sha: 97cb4e95c724c4460b1845dcd15f7417ef7b3ed1
+  sha: 8129894feeaafe9aa94e4adcfe39cf38335da87c
   specs:
-    repositoryhandler (1.1.1)
-      git (>= 0.0.0)
-      python (>= 0.0.0)
-
-GIT
-  remote: https://github.com/andygrunwald/chef-typo3analytics
-  ref: master
-  sha: 7e825a5f7d3f5a1b4c848d6345cb079a69b6c426
-  specs:
-    typo3analytics (2.1.2)
+    jacobine (3.0.0)
       apache2 (>= 0.0.0)
       composer (>= 0.0.0)
       database (>= 0.0.0)
@@ -114,9 +105,18 @@ GIT
       supervisor (>= 0.0.0)
 
 GIT
+  remote: https://github.com/andygrunwald/chef-repositoryhandler
+  ref: master
+  sha: e535b2f1423559cae2562dcedc79157118fa81a1
+  specs:
+    repositoryhandler (1.2.0)
+      git (>= 0.0.0)
+      python (>= 0.0.0)
+
+GIT
   remote: https://github.com/ffuenf/chef-dotdeb
   ref: master
-  sha: 1ec0bacdf6b753df1e6bf759e879d7a0dfc14154
+  sha: 9ed0d354a95eba0791612112a5973ecacb44ac1f
   specs:
     dotdeb (0.0.8)
       apt (>= 0.0.0)
@@ -137,12 +137,12 @@ DEPENDENCIES
   dotdeb (>= 0)
   git (>= 0)
   github-linguist (>= 0)
+  jacobine (>= 0)
   mysql (>= 0)
   php (>= 0)
   python (>= 0)
   rabbitmq (>= 0)
   repositoryhandler (>= 0)
   supervisor (>= 0)
-  typo3analytics (>= 0)
   vim (>= 0)
 
