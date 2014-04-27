@@ -44,7 +44,7 @@ override_attributes(
 	:cvsanaly => {
 		:destination => '/var/www/analysis/tools/MetricsGrimoire/CVSAnalY'
 	},
-	:github_linguist => {
+	:linguist => {
 		:install_method => "source",
 		:path => "/var/www/analysis/tools/github-linguist"
 	}
