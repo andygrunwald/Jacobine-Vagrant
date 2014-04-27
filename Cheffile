@@ -33,8 +33,8 @@ cookbook "supervisor",
 
 cookbook 'rabbitmq'
 
-cookbook "typo3analytics",
-	:git => "https://github.com/andygrunwald/chef-typo3analytics",
+cookbook "jacobine",
+	:git => "https://github.com/andygrunwald/chef-jacobine.git",
 	:ref => "master"
 
 cookbook "github-linguist",
