@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "debian-wheezy-chef11"
   config.vm.box_url = "https://dl.dropboxusercontent.com/u/10444758/vagrant/debian-wheezy-chef11/debian-wheezy-chef11.box"
 
-  config.vm.hostname = 'typo3-analytics'
+  config.vm.hostname = 'jacobine'
 
   config.vm.network :private_network, ip: "192.168.33.55"
 
