@@ -5,7 +5,13 @@ site 'http://community.opscode.com/api/v1'
 
 # Role: base
 cookbook 'apt'
-cookbook 'build-essential'
+# Bugfix for COOK-4534
+# If https://github.com/opscode-cookbooks/build-essential/pull/32 is merged
+# We can switch back to original cookbook
+cookbook 'build-essential',
+	:git => "https://github.com/andygrunwald/build-essential",
+	:ref => "develop"
+
 cookbook 'git'
 cookbook 'vim'
 cookbook 'dotdeb',
@@ -37,6 +43,6 @@ cookbook "jacobine",
 	:git => "https://github.com/andygrunwald/chef-jacobine.git",
 	:ref => "master"
 
-cookbook "github-linguist",
+cookbook "linguist",
 	:git => "https://github.com/andygrunwald/chef-github-linguist",
 	:ref => "master"

@@ -13,7 +13,7 @@ run_list "recipe[supervisor]",
 		 "recipe[jacobine::logrotate]",
 		 "recipe[repositoryhandler]",
 		 "recipe[cvsanaly]",
-		 "recipe[github-linguist]"
+		 "recipe[linguist]"
 
 override_attributes(
 	:supervisor => {

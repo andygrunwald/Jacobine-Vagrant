@@ -7,9 +7,8 @@ SITE
       pacman (>= 0.0.0)
     apt (2.3.10)
     aws (2.2.0)
-    build-essential (2.0.0)
     chef_handler (1.1.6)
-    composer (1.0.0)
+    composer (1.0.1)
       php (>= 0.0.0)
     database (2.1.8)
       aws (>= 0.0.0)
@@ -48,8 +47,8 @@ SITE
       windows (>= 0.0.0)
       xml (>= 0.0.0)
       yum-epel (>= 0.0.0)
-    postgresql (3.3.4)
-      apt (>= 0.0.0)
+    postgresql (3.4.0)
+      apt (>= 1.9.0)
       build-essential (>= 0.0.0)
       openssl (>= 0.0.0)
     python (1.4.6)
@@ -75,9 +74,16 @@ SITE
       yum (~> 3.0)
 
 GIT
+  remote: https://github.com/andygrunwald/build-essential
+  ref: develop
+  sha: 26161cf8fc8aa0624d2664d2c506050e3cb37256
+  specs:
+    build-essential (2.0.1)
+
+GIT
   remote: https://github.com/andygrunwald/chef-cvsanaly
   ref: master
-  sha: cf571eacdf7056afbc00da9f43a6a717c17bf952
+  sha: 3dbe1e625d3aae4cb012cc2e99904db8ce856bb3
   specs:
     cvsanaly (1.2.0)
       repositoryhandler (>= 0.0.0)
@@ -85,16 +91,16 @@ GIT
 GIT
   remote: https://github.com/andygrunwald/chef-github-linguist
   ref: master
-  sha: ab34eb30896e68bf1620660db493877583cd86f8
+  sha: e581bc17aa1ed1623ffd1d915e529877a063d8ab
   specs:
-    github-linguist (1.0.5)
+    linguist (2.0.0)
       git (>= 0.0.0)
       rubygems (>= 0.0.0)
 
 GIT
   remote: https://github.com/andygrunwald/chef-jacobine.git
   ref: master
-  sha: 8129894feeaafe9aa94e4adcfe39cf38335da87c
+  sha: 11f8033bad77431924875cb300a9c13aaba5f57d
   specs:
     jacobine (3.0.0)
       apache2 (>= 0.0.0)
@@ -107,7 +113,7 @@ GIT
 GIT
   remote: https://github.com/andygrunwald/chef-repositoryhandler
   ref: master
-  sha: e535b2f1423559cae2562dcedc79157118fa81a1
+  sha: a58131c18a825223d1112524a2a9b47f2031a936
   specs:
     repositoryhandler (1.2.0)
       git (>= 0.0.0)
@@ -136,8 +142,8 @@ DEPENDENCIES
   cvsanaly (>= 0)
   dotdeb (>= 0)
   git (>= 0)
-  github-linguist (>= 0)
   jacobine (>= 0)
+  linguist (>= 0)
   mysql (>= 0)
   php (>= 0)
   python (>= 0)
