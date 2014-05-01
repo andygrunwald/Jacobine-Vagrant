@@ -6,6 +6,19 @@ The full application and library stack is bundled into a easy to use virtual mac
 This repository only contains the (complex) setup of [Jacobine](https://github.com/andygrunwald/Jacobine).
 This can be used to development or showcase.
 
+What does a "complex" setup mean?
+Jacobine requires a lot of various tools. Some of them are:
+* RabbitMQ
+* PHP
+* MySQL
+* Ruby
+* Python
+* github linguist
+* CVSAnaly
+
+This is not the complete list and this list can changed due to new features of Jacobine.
+This vagrant setup will install all necessary requirements in a easy way in a virtual machine.
+
 *ATTENTION*:
 This project is highly under development and can be change during development completely.
 But contribution is already welcome :)
