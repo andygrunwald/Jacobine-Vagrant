@@ -58,7 +58,7 @@ The login credentials for the used services
 * Port: 3306
 * Username: analysis
 * Passwort: analysis
-* Database: typo3
+* Database: jacobine
 
 ### RabbitMQ
 
