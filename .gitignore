@@ -3,7 +3,6 @@
 .vagrant
 
 Chef/tmp
-Chef/cookbooks
 tmp
 
 Application

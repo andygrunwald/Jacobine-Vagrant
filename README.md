@@ -16,14 +16,12 @@ To use this project you have to install the listed requirements:
 
 * [Virtualbox](https://www.virtualbox.org/) or [VMWare](http://www.vmware.com/)
 * [Vagrant](http://www.vagrantup.com/)
-* [librarian-chef](https://github.com/applicationsonline/librarian-chef)
 
 ## Installation
 
 * Check it out (`git clone https://github.com/andygrunwald/Jacobine-Vagrant.git`)
 * Switch to cloned directory (`cd Jacobine-Vagrant`)
 * Check out the [application](https://github.com/andygrunwald/Jacobine) (`git clone https://github.com/andygrunwald/Jacobine.git Application`)
-* Install Chef cookbooks via [librarian-chef](https://github.com/applicationsonline/librarian-chef) (`librarian-chef install`)
 * [Configure the application](https://github.com/andygrunwald/Jacobine/wiki/Configure)
 * Start the application (`vagrant up`)
 * Take a break or a coffee (or both ;))
@@ -60,6 +58,26 @@ The login credentials for the used services
 * Port: 9001
 * Username: analysis
 * Password: analysis
+
+## Updating cookbooks
+
+If you want to upgrade our cookbooks (e.g. to get a new feature or to be up to date) here is a small guide.
+We deliver all cookbooks with this repository to make the start more easier to new people.
+
+For cookbooks dependency management we use [librarian-chef](https://github.com/applicationsonline/librarian-chef).
+The Cheffile + Cheffile.lock are the files who contain the information about the cookbooks.
+You need to install [librarian-chef](https://github.com/applicationsonline/librarian-chef) to update the cookbooks.
+
+Next step is to upgrade the cookbooks itselfs:
+
+* Delete the Cheffile.lock (`rm Cheffile.lock`)
+* Install Chef cookbooks via [librarian-chef](https://github.com/applicationsonline/librarian-chef) (`librarian-chef install`)
+* Delete .git repos of cookbooks to store them at github (`./Helper/delete-git-repos-of-cookbooks.sh`)
+
+Finally test the upgrade:
+
+* Destroy the current machine (`vagrant destroy`)
+* Start the new machine (`vagrant up`)
 
 ## Contributing
 

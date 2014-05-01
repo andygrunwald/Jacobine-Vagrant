@@ -1,0 +1,20 @@
+---
+driver:
+  name: vagrant
+  driver_config:
+    require_chef_omnibus: latest
+
+provisioner:
+  name: chef_solo
+
+platforms:
+- name: debian-7.4.0-amd64
+  driver_config:
+    box: debian-7.4.0-amd64
+    box_url: https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.4.0-amd64_virtualbox.box
+
+suites:
+- name: default
+  run_list:
+    - recipe[dotdeb::default]
+  attributes: {}

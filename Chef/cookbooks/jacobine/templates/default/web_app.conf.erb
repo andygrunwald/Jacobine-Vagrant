@@ -1,0 +1,28 @@
+<% if @params[:ip] -%>
+<VirtualHost <%= @params[:ip] %>:80>
+<% else %>
+<VirtualHost *:80>
+<% end %>
+  ServerName <%= @params[:server_name] %>
+  #ServerAlias <% @params[:server_aliases].each do |a| %><%= a %> <% end %>
+  DocumentRoot <%= @params[:docroot] %>
+
+  <Directory <%= @params[:docroot] %>>
+    Options <%= [@params[:directory_options] || "FollowSymLinks" ].flatten.join " " %>
+    AllowOverride <%= [@params[:allow_override] || "None" ].flatten.join " " %>
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  LogLevel info
+
+  ErrorLog "|/usr/sbin/rotatelogs <%= node['apache']['log_dir'] %>/%y%m%d_<%= @params[:name] %>-error.log 86400"
+  LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"" combined
+  CustomLog "|/usr/sbin/rotatelogs <%= node['apache']['log_dir'] %>/%y%m%d_<%= @params[:name] %>-access.log 86400" combined
+
+  <% if @params[:directory_index] -%>
+  DirectoryIndex <%= [@params[:directory_index]].flatten.join " " %>
+  <% end -%>
+
+  RewriteEngine On
+</VirtualHost>
