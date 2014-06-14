@@ -17,18 +17,6 @@
 # limitations under the License.
 #
 
-# Bug: COOK-4534
-# See https://github.com/opscode-cookbooks/build-essential/pull/32
-execute 'apt-get-update-build-essentials' do
-  command 'apt-get update'
-  action :nothing
-  # tip: to suppress this running every time, just use the apt cookbook
-  not_if do
-    ::File.exists?('/var/lib/apt/periodic/update-success-stamp') &&
-    ::File.mtime('/var/lib/apt/periodic/update-success-stamp') > Time.now - 86_400 * 2
-  end
-end.run_action(:run) if node['build-essential']['compile_time']
-
 potentially_at_compile_time do
   package 'autoconf'
   package 'binutils-doc'

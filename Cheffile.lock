@@ -5,12 +5,14 @@ SITE
       iptables (>= 0.0.0)
       logrotate (>= 0.0.0)
       pacman (>= 0.0.0)
-    apt (2.3.10)
-    aws (2.2.0)
+    apt (2.4.0)
+    aws (2.2.2)
+    build-essential (2.0.4)
+    chef-sugar (1.3.0)
     chef_handler (1.1.6)
-    composer (1.0.1)
+    composer (1.0.3)
       php (>= 0.0.0)
-    database (2.1.8)
+    database (2.2.0)
       aws (>= 0.0.0)
       mysql (>= 5.0.0)
       mysql-chef_gem (>= 0.0.0)
@@ -33,12 +35,14 @@ SITE
     iis (2.1.2)
       windows (>= 1.2.6)
     iptables (0.13.2)
-    logrotate (1.5.0)
-    mysql (5.2.2)
+    logrotate (1.6.0)
+    mysql (5.3.0)
+      yum-mysql-community (>= 0.0.0)
     mysql-chef_gem (0.0.2)
       build-essential (>= 0.0.0)
       mysql (>= 0.0.0)
-    openssl (1.1.0)
+    openssl (2.0.0)
+      chef-sugar (>= 0.0.0)
     pacman (1.1.1)
     php (1.4.6)
       build-essential (>= 0.0.0)
@@ -47,14 +51,14 @@ SITE
       windows (>= 0.0.0)
       xml (>= 0.0.0)
       yum-epel (>= 0.0.0)
-    postgresql (3.4.0)
+    postgresql (3.4.1)
       apt (>= 1.9.0)
       build-essential (>= 0.0.0)
       openssl (>= 0.0.0)
     python (1.4.6)
       build-essential (>= 0.0.0)
       yum-epel (>= 0.0.0)
-    rabbitmq (3.2.0)
+    rabbitmq (3.2.2)
       erlang (>= 0.9.0)
     rubygems (0.3.0)
     runit (1.5.10)
@@ -62,23 +66,18 @@ SITE
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
     vim (1.1.2)
-    windows (1.30.2)
+    windows (1.31.0)
       chef_handler (>= 0.0.0)
     xfs (1.1.0)
     xml (1.2.4)
       build-essential (>= 0.0.0)
-    yum (3.2.0)
+    yum (3.2.2)
     yum-epel (0.3.6)
       yum (~> 3.0)
     yum-erlang_solutions (0.2.0)
       yum (~> 3.0)
-
-GIT
-  remote: https://github.com/andygrunwald/build-essential
-  ref: develop
-  sha: 26161cf8fc8aa0624d2664d2c506050e3cb37256
-  specs:
-    build-essential (2.0.1)
+    yum-mysql-community (0.1.4)
+      yum (>= 3.0.0)
 
 GIT
   remote: https://github.com/andygrunwald/chef-cvsanaly
@@ -100,12 +99,13 @@ GIT
 GIT
   remote: https://github.com/andygrunwald/chef-jacobine.git
   ref: master
-  sha: 11f8033bad77431924875cb300a9c13aaba5f57d
+  sha: 1b2f9b6d2d6f000961ef49245fab927425613733
   specs:
-    jacobine (3.0.0)
+    jacobine (3.2.0)
       apache2 (>= 0.0.0)
       composer (>= 0.0.0)
       database (>= 0.0.0)
+      dotdeb (>= 0.0.0)
       logrotate (>= 0.0.0)
       mysql (>= 0.0.0)
       supervisor (>= 0.0.0)

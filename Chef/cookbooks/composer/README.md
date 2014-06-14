@@ -67,6 +67,7 @@ This cookbook includes an LWRP for managing a Composer project
 composer_project "/path/to/project" do
     dev false
     quiet true
+    prefer_dist false
     action :install
 end
 
@@ -101,7 +102,7 @@ References
 License and Authors
 ===================
 
-Author: David Joos <david@escapestudios.com>
+Author: David Joos <david.joos@escapestudios.com>
 Author: Escape Studios Development <dev@escapestudios.com>
 Copyright: 2012-2014, Escape Studios
 

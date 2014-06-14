@@ -18,6 +18,7 @@
 #
 
 mysql_service node['mysql']['service_name'] do
+  version node['mysql']['version']
   port node['mysql']['port']
   data_dir node['mysql']['data_dir']
   server_root_password node['mysql']['server_root_password']
@@ -27,5 +28,6 @@ mysql_service node['mysql']['service_name'] do
   remove_anonymous_users node['mysql']['remove_anonymous_users']
   remove_test_database node['mysql']['remove_test_database']
   root_network_acl node['mysql']['root_network_acl']
+  version node['mysql']['version']
   action :create
 end

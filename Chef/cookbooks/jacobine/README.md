@@ -13,6 +13,7 @@ A checkout of [Jacobine](https://github.com/andygrunwald/Jacobine)
 - `supervisor`
 - `logrotate`
 - `apache2`
+- `dotdeb`
 
 Attributes
 ----------
@@ -31,6 +32,7 @@ Please see recipes/* for all available recipes. Here is a small list about avail
 * `default`: Empty recipe to fits Chef needs
 * `directories`: Creation of various directories for data storage and logs
 * `logrotate`: Configures logrotate to rotate written logs by Jacobine
+* `php`: Installs dotdeb + php. Just a wrapper recipe
 * `supervisord`: Configures supervisor to take care of our consumers
 * `systemuser`: Setup of a systemuser to execute Jacobines processes under an own user
 * `website`: Setup of the Jacobine FE (create directories, clone, deploy webservers vhost, etc.)

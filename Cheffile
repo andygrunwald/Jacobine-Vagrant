@@ -5,12 +5,7 @@ site 'http://community.opscode.com/api/v1'
 
 # Role: base
 cookbook 'apt'
-# Bugfix for COOK-4534
-# If https://github.com/opscode-cookbooks/build-essential/pull/32 is merged
-# We can switch back to original cookbook
-cookbook 'build-essential',
-	:git => "https://github.com/andygrunwald/build-essential",
-	:ref => "develop"
+cookbook 'build-essential'
 
 cookbook 'git'
 cookbook 'vim'

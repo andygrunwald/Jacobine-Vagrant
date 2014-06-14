@@ -145,15 +145,3 @@ supervisor_service "consumer-crawler-gerrit" do
 
 	action :enable
 end
-
-# Consumer: Crawler\\GerritProject
-supervisor_service "consumer-crawler-gerritproject" do
-	command "php #{consoleBin} analysis:consumer Crawler\\\\GerritProject"
-	process_name "%(program_name)s_%(process_num)02d"
-	numprocs 2
-	autorestart true
-	autostart true
-	user supervisordUser
-
-	action :enable
-end

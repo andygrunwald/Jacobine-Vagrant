@@ -21,16 +21,6 @@ include_recipe "logrotate"
 
 logDir = node[:jacobine][:log_dir]
 
-# Consumer: Crawler\\GerritProject
-logrotate_app "analysis-crawler-gerritproject" do
-	cookbook "logrotate"
-	path "#{logDir}/crawler.gerritproject-stream.log"
-	enable true
-	frequency "daily"
-	options ["copytruncate", "dateext", "compress"]
-	rotate 31
-end
-
 # Consumer: Crawler\\Gerrit
 logrotate_app "analysis-crawler-gerrit" do
 	cookbook "logrotate"
