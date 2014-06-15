@@ -23,6 +23,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Deploy the stack + application
   config.vm.provision :chef_solo do |chef|
+    chef.custom_config_path = "Vagrantfile.chef"
     chef.cookbooks_path = "Chef/cookbooks"
     chef.roles_path = "Chef/roles"
     chef.add_role "base"

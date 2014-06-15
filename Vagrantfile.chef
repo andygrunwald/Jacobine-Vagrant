@@ -1,0 +1,6 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Disable chef solo warnings regarding ssl connections
+# @link http://stackoverflow.com/questions/22991561/chef-solo-ssl-warning-when-provisioning
+Chef::Config.ssl_verify_mode = :verify_peer
