@@ -16,10 +16,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.memory = 1024
   end
 
-  # Install chef client
-  config.vm.provision "shell" do |s|
-    s.inline = "curl -L https://www.opscode.com/chef/install.sh | sudo bash"
-  end
+  # Install chef client (if necessary)
+  config.vm.provision "shell", path: "Chef/scripts/install-chef.sh"
 
   # Deploy the stack + application
   config.vm.provision :chef_solo do |chef|
