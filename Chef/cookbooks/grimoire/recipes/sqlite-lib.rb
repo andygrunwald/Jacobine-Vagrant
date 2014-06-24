@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: cvsanaly
-# Attributes:: default
+# Cookbook Name:: grimoire
+# Recipe:: sqlite-lib
 #
-# Copyright 2013, Andy Grunwald
+# Copyright 2014, Andy Grunwald
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,14 +17,12 @@
 # limitations under the License.
 #
 
-# Sometimes you want to install a fork of CVSAnalY
-default[:cvsanaly][:repository] = "https://github.com/MetricsGrimoire/CVSAnalY.git"
+include_recipe "python::pip"
 
-# If you want to checkout a fixed tag or a development version
-default[:cvsanaly][:version] = "master"
+# SQLite lib
+package "libsqlite3-dev"
 
-# The install directory of RepositoryHandler
-default[:cvsanaly][:destination] = "/vagrant/MetricsGrimoire/CVSAnalY"
-
-default[:cvsanaly][:owner] = "root"
-default[:cvsanaly][:group] = "root"
+# SQLite python lib
+python_pip "pysqlite" do
+  action :install
+end

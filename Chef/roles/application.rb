@@ -11,8 +11,8 @@ run_list "recipe[supervisor]",
 		 "recipe[jacobine::database]",
 		 "recipe[jacobine::supervisord]",
 		 "recipe[jacobine::logrotate]",
-		 "recipe[repositoryhandler]",
-		 "recipe[cvsanaly]",
+		 "recipe[grimoire::cvsanaly]",
+		 "recipe[grimoire::mlstats]",
 		 "recipe[linguist]"
 
 override_attributes(
@@ -22,7 +22,7 @@ override_attributes(
 		:inet_password => "analysis"
 	},
 	:rabbitmq => {
-		:version => '3.3.0',
+		:version => '3.3.3',
 		:address => '192.168.33.55',
 		:virtualhosts => ['analysis'],
 		:enabled_users => [{
@@ -38,11 +38,16 @@ override_attributes(
 		}],
 		:disabled_users => ['guest']
 	},
-	:repositoryhandler => {
-		:destination => '/var/www/analysis/tools/MetricsGrimoire/RepositoryHandler'
-	},
-	:cvsanaly => {
-		:destination => '/var/www/analysis/tools/MetricsGrimoire/CVSAnalY'
+	:grimoire => {
+		:repositoryhandler => {
+			:destination => '/var/www/analysis/tools/MetricsGrimoire/RepositoryHandler'
+		},
+		:cvsanaly => {
+			:destination => '/var/www/analysis/tools/MetricsGrimoire/CVSAnalY'
+		},
+		:mlstats => {
+			:destination => '/var/www/analysis/tools/MetricsGrimoire/MLStats'
+		},
 	},
 	:linguist => {
 		:install_method => "source",

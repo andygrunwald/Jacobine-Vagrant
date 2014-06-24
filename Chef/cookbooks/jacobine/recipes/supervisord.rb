@@ -119,9 +119,6 @@ supervisor_service "consumer-analysis-pdepend" do
 	action :enable
 end
 
-repositoryHandlerDir = node[:repositoryhandler][:destination]
-cvsAnalyDir = node[:cvsanaly][:destination]
-
 # Consumer: Analysis\\CVSAnaly
 supervisor_service "consumer-analysis-cvsanaly" do
 	command "php #{consoleBin} analysis:consumer Analysis\\\\CVSAnaly"

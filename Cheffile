@@ -20,12 +20,8 @@ cookbook 'php'
 cookbook 'composer'
 
 # Role: application
-cookbook "repositoryhandler",
-	:git => "https://github.com/andygrunwald/chef-repositoryhandler",
-	:ref => "master"
-
-cookbook "cvsanaly",
-	:git => "https://github.com/andygrunwald/chef-cvsanaly",
+cookbook "grimoire",
+	:git => "https://github.com/andygrunwald/chef-grimoire",
 	:ref => "master"
 
 cookbook "supervisor",

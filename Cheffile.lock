@@ -8,7 +8,7 @@ SITE
     apt (2.4.0)
     aws (2.2.2)
     build-essential (2.0.4)
-    chef-sugar (1.3.0)
+    chef-sugar (2.0.0)
     chef_handler (1.1.6)
     composer (1.0.3)
       php (>= 0.0.0)
@@ -36,7 +36,7 @@ SITE
       windows (>= 1.2.6)
     iptables (0.13.2)
     logrotate (1.6.0)
-    mysql (5.3.0)
+    mysql (5.3.6)
       yum-mysql-community (>= 0.0.0)
     mysql-chef_gem (0.0.2)
       build-essential (>= 0.0.0)
@@ -65,27 +65,23 @@ SITE
       build-essential (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
+    subversion (1.1.2)
+      apache2 (~> 1.7)
+      windows (~> 1.10)
     vim (1.1.2)
     windows (1.31.0)
       chef_handler (>= 0.0.0)
     xfs (1.1.0)
-    xml (1.2.4)
+    xml (1.2.6)
       build-essential (>= 0.0.0)
+      chef-sugar (>= 0.0.0)
     yum (3.2.2)
     yum-epel (0.3.6)
       yum (~> 3.0)
     yum-erlang_solutions (0.2.0)
       yum (~> 3.0)
-    yum-mysql-community (0.1.4)
+    yum-mysql-community (0.1.8)
       yum (>= 3.0.0)
-
-GIT
-  remote: https://github.com/andygrunwald/chef-cvsanaly
-  ref: master
-  sha: 3dbe1e625d3aae4cb012cc2e99904db8ce856bb3
-  specs:
-    cvsanaly (1.2.0)
-      repositoryhandler (>= 0.0.0)
 
 GIT
   remote: https://github.com/andygrunwald/chef-github-linguist
@@ -97,11 +93,21 @@ GIT
       rubygems (>= 0.0.0)
 
 GIT
+  remote: https://github.com/andygrunwald/chef-grimoire
+  ref: master
+  sha: 50871bc5c9c1f213818c546c39cf551edded567a
+  specs:
+    grimoire (0.0.1)
+      git (>= 0.0.0)
+      python (>= 0.0.0)
+      subversion (>= 0.0.0)
+
+GIT
   remote: https://github.com/andygrunwald/chef-jacobine.git
   ref: master
-  sha: 1b2f9b6d2d6f000961ef49245fab927425613733
+  sha: 3740b9e1fefe85fcf8f3a4c7b71a9c4d08157dc4
   specs:
-    jacobine (3.2.0)
+    jacobine (3.2.1)
       apache2 (>= 0.0.0)
       composer (>= 0.0.0)
       database (>= 0.0.0)
@@ -109,15 +115,6 @@ GIT
       logrotate (>= 0.0.0)
       mysql (>= 0.0.0)
       supervisor (>= 0.0.0)
-
-GIT
-  remote: https://github.com/andygrunwald/chef-repositoryhandler
-  ref: master
-  sha: a58131c18a825223d1112524a2a9b47f2031a936
-  specs:
-    repositoryhandler (1.2.0)
-      git (>= 0.0.0)
-      python (>= 0.0.0)
 
 GIT
   remote: https://github.com/ffuenf/chef-dotdeb
@@ -139,16 +136,15 @@ DEPENDENCIES
   apt (>= 0)
   build-essential (>= 0)
   composer (>= 0)
-  cvsanaly (>= 0)
   dotdeb (>= 0)
   git (>= 0)
+  grimoire (>= 0)
   jacobine (>= 0)
   linguist (>= 0)
   mysql (>= 0)
   php (>= 0)
   python (>= 0)
   rabbitmq (>= 0)
-  repositoryhandler (>= 0)
   supervisor (>= 0)
   vim (>= 0)
 

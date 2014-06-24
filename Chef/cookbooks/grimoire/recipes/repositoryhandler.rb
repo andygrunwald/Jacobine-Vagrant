@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: repositoryhandler
-# Recipe:: default
+# Cookbook Name:: grimoire
+# Recipe:: repositoryhandler
 #
-# Copyright 2013-2014, Andy Grunwald
+# Copyright 2014, Andy Grunwald
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,27 +18,28 @@
 #
 
 include_recipe "git"
-include_recipe "python::package"
+include_recipe "subversion"
+include_recipe "python"
 
-targetDir = node[:repositoryhandler][:destination]
+targetDir = node[:grimoire][:repositoryhandler][:destination]
 
 directory "#{targetDir}" do
-	owner node[:repositoryhandler][:owner]
-	group node[:repositoryhandler][:group]
-	mode  "0755"
-	action :create
-	recursive true
+  owner node[:grimoire][:repositoryhandler][:owner]
+  group node[:grimoire][:repositoryhandler][:group]
+  mode  "0755"
+  action :create
+  recursive true
 end
 
-git "Checkout Code" do
-	repository node[:repositoryhandler][:repository]
-	reference node[:repositoryhandler][:version]
-	action :sync
-	destination targetDir
+git "checkout-repositoryhandler" do
+  repository node[:grimoire][:repositoryhandler][:repository]
+  reference node[:grimoire][:repositoryhandler][:version]
+  action :sync
+  destination targetDir
 end
 
 execute "repositoryhandler-setup.py install" do
-	command "python setup.py install"
-	cwd targetDir
-	action :run
+  command "python setup.py install"
+  cwd targetDir
+  action :run
 end

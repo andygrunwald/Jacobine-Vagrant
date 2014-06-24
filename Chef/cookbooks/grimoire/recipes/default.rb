@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: chef-sugar
+# Cookbook Name:: grimoire
 # Recipe:: default
 #
-# Copyright 2013-2014, Seth Vargo <sethvargo@gmail.com>
+# Copyright 2014, Andy Grunwald
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,9 +17,8 @@
 # limitations under the License.
 #
 
-chef_gem('chef-sugar') do
-  version '2.0.0'
-  action  :nothing
-end.run_action(:install)
-
-require 'chef/sugar'
+#
+# This recipe is empty.
+# Please include the application you want to install
+# E.g. mlstats
+#

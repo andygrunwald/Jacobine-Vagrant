@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: chef-sugar
-# Recipe:: default
+# Cookbook Name:: grimoire
+# Recipe:: postgresql-lib
 #
-# Copyright 2013-2014, Seth Vargo <sethvargo@gmail.com>
+# Copyright 2014, Andy Grunwald
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,9 +17,12 @@
 # limitations under the License.
 #
 
-chef_gem('chef-sugar') do
-  version '2.0.0'
-  action  :nothing
-end.run_action(:install)
+include_recipe "python::pip"
 
-require 'chef/sugar'
+# PostgreSQL lib
+package "libpq-dev"
+
+# PostgreSQL python lib
+python_pip "psycopg2" do
+  action :install
+end

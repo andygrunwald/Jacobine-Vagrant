@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: cvsanaly
-# Recipe:: dependencies
+# Cookbook Name:: grimoire
+# Recipe:: sqlalchemy
 #
-# Copyright 2013-2014, Andy Grunwald
+# Copyright 2014, Andy Grunwald
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,18 +17,7 @@
 # limitations under the License.
 #
 
-include_recipe "python::pip"
-
-# MySQL python lib
-package "libmysqlclient-dev"
-
-python_pip "MySQL-python" do
-	action :install
-end
-
-# SQLLite python lib
-package "libsqlite3-dev"
-
-python_pip "pysqlite" do
-	action :install
+# sqlalchemy python package
+python_pip "sqlalchemy" do
+  action :install
 end

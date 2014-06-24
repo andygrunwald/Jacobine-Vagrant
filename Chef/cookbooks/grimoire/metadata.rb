@@ -1,10 +1,11 @@
-name             'repositoryhandler'
+name             'grimoire'
 maintainer       'Andy Grunwald'
 maintainer_email 'andygrunwald@gmail.com'
 license          'Apache 2.0'
-description      'Installs/Configures RepositoryHandler'
+description      'Installs/Configures tools from *Grimoire (e.g. MetricsGrimoire or VizGrimoire)'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '1.2.0'
+version          '0.0.1'
 
 depends "git"
+depends "subversion"
 depends "python"
