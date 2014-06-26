@@ -71,7 +71,8 @@ default[:jacobine][:supervisord][:user] = "analysis"
 default[:jacobine][:supervisord][:processes] = []
 
 # Cron
-default[:jacobine][:cron_user] = "vagrant"
+default[:jacobine][:cron][:user] = "vagrant"
+default[:jacobine][:cron][:processes] = []
 
 # Website
 default[:jacobine][:website][:dir] = "/var/www/analysis.local"
