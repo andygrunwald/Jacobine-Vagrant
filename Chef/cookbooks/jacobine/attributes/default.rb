@@ -58,7 +58,7 @@ default[:jacobine][:gerrie_configfile] = "/var/www/analysis/Config/gerrit-review
 default[:jacobine][:console_bin] = "/var/www/analysis/console"
 
 # Logrotate
-default[:jacobine][:logrotate][:logs] = {}
+default[:jacobine][:logrotate][:logs] = []
 
 # System user
 default[:jacobine][:analysis][:user] = "analysis"
@@ -68,6 +68,7 @@ default[:jacobine][:analysis][:shell] = "/bin/false"
 
 # Supervisord
 default[:jacobine][:supervisord][:user] = "analysis"
+default[:jacobine][:supervisord][:processes] = []
 
 # Cron
 default[:jacobine][:cron_user] = "vagrant"
