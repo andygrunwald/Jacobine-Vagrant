@@ -23,6 +23,8 @@ include_recipe "supervisor"
 consoleBin = node[:jacobine][:console_bin]
 supervisordUser = node[:jacobine][:supervisord][:user]
 
+#TODO Refactor supervisord for a loop with configuration
+
 # Consumer: Download\\Git
 supervisor_service "consumer-download-git" do
 	command "php #{consoleBin} analysis:consumer Download\\\\Git"

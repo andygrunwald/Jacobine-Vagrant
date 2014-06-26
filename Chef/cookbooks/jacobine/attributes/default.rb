@@ -57,6 +57,9 @@ default[:jacobine][:gerrie_configfile] = "/var/www/analysis/Config/gerrit-review
 # Binaries
 default[:jacobine][:console_bin] = "/var/www/analysis/console"
 
+# Logrotate
+default[:jacobine][:logrotate][:logs] = {}
+
 # System user
 default[:jacobine][:analysis][:user] = "analysis"
 default[:jacobine][:analysis][:group] = "www-data"

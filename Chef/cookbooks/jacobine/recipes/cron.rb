@@ -21,6 +21,8 @@ phpBin = node[:jacobine][:php_bin]
 consoleBin = node[:jacobine][:console_bin]
 cronUser = node[:jacobine][:cron_user]
 
+#TODO Refactor crons for a loop with configuration
+
 # Crontab entry for typo3:get.typo3.org console command
 # Every day at 00:15, 04:15, 08:15, 12:15, 16:15, 20:15
 cron "typo3_get-typo3-org" do
