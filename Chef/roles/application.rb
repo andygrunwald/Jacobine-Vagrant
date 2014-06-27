@@ -66,6 +66,12 @@ override_attributes(
 					:command => "analysis:consumer Crawler\\\\Gitweb",
 					:numprocs => 1
 				},
+				# Consumer: Crawler\\Mailinglist
+				{
+					:name => "consumer-crawler-mailinglist",
+					:command => "analysis:consumer Crawler\\\\Mailinglist",
+					:numprocs => 1
+				},
 				# Consumer: Analysis\\Filesize
 				{
 					:name => "consumer-analysis-filesize",
@@ -117,6 +123,17 @@ override_attributes(
 					:name => "analysis-crawler-gitweb",
 					:path => "crawler.gitweb-stream.log",
 					:options => ["copytruncate", "dateext", "compress"]
+				},
+				# Consumer: Crawler\\Mailinglist
+				{
+					:name => "analysis-crawler-mailinglist",
+					:path => "crawler.mailinglist-stream.log",
+					:options => ["copytruncate", "dateext", "compress"]
+				},
+				{
+					:name => "analysis-analysis-mailinglist-error",
+					:path => "analysis.mailinglist-errorstream.log",
+					:options => ["copytruncate", "dateext", "missingok", "compress"]
 				},
 				# Consumer: Analysis\\CVSAnaly
 				{
