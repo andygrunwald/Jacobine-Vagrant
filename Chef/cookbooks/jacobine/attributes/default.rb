@@ -78,7 +78,7 @@ default[:jacobine][:cron][:processes] = []
 default[:jacobine][:website][:dir] = "/var/www/analysis.local"
 default[:jacobine][:website][:dir_user] = "vagrant"
 default[:jacobine][:website][:dir_group] = "vagrant"
-default[:jacobine][:website][:repository] = "https://github.com/andygrunwald/Jacobine-Web.git"
+default[:jacobine][:website][:repository] = "https://github.com/andygrunwald/Jacobine-Web-Frontend.git"
 default[:jacobine][:website][:revision] = "master"
 
 default[:jacobine][:website][:ip] = "192.168.33.55"
