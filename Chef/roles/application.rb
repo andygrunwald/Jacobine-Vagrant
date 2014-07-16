@@ -12,8 +12,9 @@ run_list "recipe[supervisor]",
 		 "recipe[jacobine::supervisord]",
 		 "recipe[jacobine::logrotate]",
 		 "recipe[grimoire::cvsanaly]",
-		 "recipe[grimoire::mlstats]",
-		 "recipe[linguist]"
+		 "recipe[grimoire::mlstats]"
+		# https://github.com/andygrunwald/Jacobine-Vagrant/issues/4
+		#"recipe[linguist]"
 
 override_attributes(
 	:supervisor => {
