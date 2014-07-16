@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of dotdeb.
 
+## 0.0.9
+
+* add node.default['dotdeb']['gpg-key'] to circumvent downtime of website
+
 ## 0.0.8:
 
 * set default distribution to debian 7 (wheezy)

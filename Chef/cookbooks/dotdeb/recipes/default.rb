@@ -26,14 +26,16 @@ if node['platform'] == 'debian'
 			uri node['dotdeb']['uri']
 			distribution "#{node['dotdeb']['distribution']}-php55"
 			components ['all']
-			key "http://www.dotdeb.org/dotdeb.gpg"
+			key node['dotdeb']['gpg-key']
+			cookbook "dotdeb"
 			action :add
 		end
 		apt_repository "dotdeb" do
 			uri node['dotdeb']['uri']
 			distribution node['dotdeb']['distribution']
 			components ['all']
-			key "http://www.dotdeb.org/dotdeb.gpg"
+			key node['dotdeb']['gpg-key']
+			cookbook "dotdeb"
 			action :add
 		end
 	elsif node['dotdeb']['php54']
@@ -41,14 +43,16 @@ if node['platform'] == 'debian'
 			uri node['dotdeb']['uri']
 			distribution "#{node['dotdeb']['distribution']}-php54"
 			components ['all']
-			key "http://www.dotdeb.org/dotdeb.gpg"
+			key node['dotdeb']['gpg-key']
+			cookbook "dotdeb"
 			action :add
 		end
 		apt_repository "dotdeb" do
 			uri node['dotdeb']['uri']
 			distribution node['dotdeb']['distribution']
 			components ['all']
-			key "http://www.dotdeb.org/dotdeb.gpg"
+			key node['dotdeb']['gpg-key']
+			cookbook "dotdeb"
 			action :add
 		end
 	else
@@ -56,7 +60,8 @@ if node['platform'] == 'debian'
 			uri node['dotdeb']['uri']
 			distribution node['dotdeb']['distribution']
 			components ['all']
-			key "http://www.dotdeb.org/dotdeb.gpg"
+			key node['dotdeb']['gpg-key']
+			cookbook "dotdeb"
 			action :add
 		end
 	end

@@ -6,7 +6,7 @@ SITE
       logrotate (>= 0.0.0)
       pacman (>= 0.0.0)
     apt (2.4.0)
-    aws (2.2.2)
+    aws (2.3.0)
     build-essential (2.0.4)
     chef-sugar (2.0.0)
     chef_handler (1.1.6)
@@ -69,7 +69,7 @@ SITE
       apache2 (~> 1.7)
       windows (~> 1.10)
     vim (1.1.2)
-    windows (1.31.0)
+    windows (1.32.3)
       chef_handler (>= 0.0.0)
     xfs (1.1.0)
     xml (1.2.6)
@@ -119,15 +119,15 @@ GIT
 GIT
   remote: https://github.com/ffuenf/chef-dotdeb
   ref: master
-  sha: 9ed0d354a95eba0791612112a5973ecacb44ac1f
+  sha: 94367601fc2d1d4374f82abbbc60dae0049dca95
   specs:
-    dotdeb (0.0.8)
+    dotdeb (0.0.10)
       apt (>= 0.0.0)
 
 GIT
   remote: https://github.com/poise/supervisor
   ref: master
-  sha: 7fb41ff6b73649cdd19fff432564bb14adfd8b20
+  sha: e21ca6ca14f71291c1a509ea18a3acd977026af0
   specs:
     supervisor (0.4.11)
       python (>= 0.0.0)
