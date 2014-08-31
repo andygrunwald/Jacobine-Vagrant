@@ -22,7 +22,7 @@ override_attributes(
 		:inet_password => "analysis"
 	},
 	:rabbitmq => {
-		:version => '3.3.3',
+		:version => '3.3.5',
 		:address => '192.168.33.55',
 		:virtualhosts => ['analysis'],
 		:enabled_users => [{
