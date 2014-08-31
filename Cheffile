@@ -17,7 +17,6 @@ cookbook 'dotdeb',
 	:git => "https://github.com/ffuenf/chef-dotdeb",
 	:ref => "master"
 
-cookbook 'php'
 cookbook 'composer'
 
 
