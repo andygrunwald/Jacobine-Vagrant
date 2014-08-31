@@ -6,32 +6,29 @@ site 'http://community.opscode.com/api/v1'
 # Role: base
 cookbook 'apt'
 cookbook 'build-essential'
-
 cookbook 'git'
 cookbook 'vim'
-cookbook 'dotdeb',
-	:git => "https://github.com/ffuenf/chef-dotdeb",
-	:ref => "master"
+
 
 # Role: web
 cookbook 'python'
 cookbook 'mysql'
+cookbook 'dotdeb',
+	:git => "https://github.com/ffuenf/chef-dotdeb",
+	:ref => "master"
+
 cookbook 'php'
 cookbook 'composer'
 
+
 # Role: application
-cookbook "grimoire",
-	:git => "https://github.com/andygrunwald/chef-grimoire",
-	:ref => "master"
-
-cookbook "supervisor",
-	:git => "https://github.com/poise/supervisor",
-	:ref => "master"
-
 cookbook 'rabbitmq'
-
 cookbook "jacobine",
 	:git => "https://github.com/andygrunwald/chef-jacobine.git",
+	:ref => "master"
+
+cookbook "grimoire",
+	:git => "https://github.com/andygrunwald/chef-grimoire",
 	:ref => "master"
 
 cookbook "linguist",
