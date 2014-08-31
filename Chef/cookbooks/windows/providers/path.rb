@@ -1,5 +1,5 @@
 #
-# Author:: Paul Morotn (<pmorton@biaprotect.com>)
+# Author:: Paul Morton (<pmorton@biaprotect.com>)
 # Cookbook Name:: windows
 # Provider:: path
 #
@@ -17,10 +17,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-use_inline_resources if defined?(use_inline_resources)
 
 action :add do
-  env "PATH" do
+  env "path" do
     action :modify
     delim ::File::PATH_SEPARATOR
     value new_resource.path
@@ -28,7 +27,7 @@ action :add do
 end
 
 action :remove do
-  env "PATH" do
+  env "path" do
     action :delete
     delim ::File::PATH_SEPARATOR
     value new_resource.path

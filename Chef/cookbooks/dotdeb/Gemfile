@@ -1,4 +1,12 @@
 source 'https://rubygems.org'
-gem 'test-kitchen'
-gem 'kitchen-vagrant'
-gem 'librarian-chef'
+
+gem 'chef'
+gem 'rake'
+gem 'berkshelf', '~> 3.0'
+gem 'foodcritic'
+gem 'rubocop'
+
+group :integration do
+  gem 'test-kitchen'
+  gem 'kitchen-vagrant'
+end

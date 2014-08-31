@@ -18,6 +18,7 @@
 #
 
 include_recipe "composer"
+include_recipe "apache2"
 
 websiteDir = node[:jacobine][:website][:dir]
 websiteUser = node[:jacobine][:website][:dir_user]

@@ -1,30 +1,32 @@
 SITE
-  remote: http://community.opscode.com/api/v1
+  remote: https://supermarket.getchef.com/api/v1
   specs:
-    apache2 (1.10.4)
+    apache2 (1.11.0)
+      freebsd (>= 0.0.0)
       iptables (>= 0.0.0)
       logrotate (>= 0.0.0)
       pacman (>= 0.0.0)
-    apt (2.4.0)
-    aws (2.3.0)
-    build-essential (2.0.4)
-    chef-sugar (2.0.0)
+    apt (2.5.3)
+    aws (2.4.0)
+    build-essential (2.0.6)
+    chef-sugar (2.2.0)
     chef_handler (1.1.6)
-    composer (1.0.3)
+    composer (1.0.4)
       php (>= 0.0.0)
-    database (2.2.0)
+    database (2.3.0)
       aws (>= 0.0.0)
       mysql (>= 5.0.0)
       mysql-chef_gem (>= 0.0.0)
       postgresql (>= 1.0.0)
       xfs (>= 0.0.0)
     dmg (2.2.0)
-    erlang (1.5.4)
+    erlang (1.5.6)
       apt (>= 1.7.0)
       build-essential (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
       yum-erlang_solutions (>= 0.0.0)
+    freebsd (0.1.9)
     git (4.0.2)
       build-essential (>= 0.0.0)
       dmg (>= 0.0.0)
@@ -34,9 +36,9 @@ SITE
       yum-epel (>= 0.0.0)
     iis (2.1.2)
       windows (>= 1.2.6)
-    iptables (0.13.2)
+    iptables (0.14.0)
     logrotate (1.6.0)
-    mysql (5.3.6)
+    mysql (5.4.4)
       yum-mysql-community (>= 0.0.0)
     mysql-chef_gem (0.0.2)
       build-essential (>= 0.0.0)
@@ -51,15 +53,15 @@ SITE
       windows (>= 0.0.0)
       xml (>= 0.0.0)
       yum-epel (>= 0.0.0)
-    postgresql (3.4.1)
+    postgresql (3.4.2)
       apt (>= 1.9.0)
       build-essential (>= 0.0.0)
       openssl (>= 0.0.0)
     python (1.4.6)
       build-essential (>= 0.0.0)
       yum-epel (>= 0.0.0)
-    rabbitmq (3.2.2)
-      erlang (>= 0.9.0)
+    rabbitmq (3.3.0)
+      erlang (>= 0.9)
     rubygems (0.3.0)
     runit (1.5.10)
       build-essential (>= 0.0.0)
@@ -68,20 +70,22 @@ SITE
     subversion (1.1.2)
       apache2 (~> 1.7)
       windows (~> 1.10)
+    supervisor (0.4.12)
+      python (>= 0.0.0)
     vim (1.1.2)
-    windows (1.32.3)
+    windows (1.34.2)
       chef_handler (>= 0.0.0)
     xfs (1.1.0)
     xml (1.2.6)
       build-essential (>= 0.0.0)
       chef-sugar (>= 0.0.0)
-    yum (3.2.2)
-    yum-epel (0.3.6)
+    yum (3.2.4)
+    yum-epel (0.4.0)
       yum (~> 3.0)
     yum-erlang_solutions (0.2.0)
       yum (~> 3.0)
-    yum-mysql-community (0.1.8)
-      yum (>= 3.0.0)
+    yum-mysql-community (0.1.10)
+      yum (>= 3.0)
 
 GIT
   remote: https://github.com/andygrunwald/chef-github-linguist
@@ -105,48 +109,40 @@ GIT
 GIT
   remote: https://github.com/andygrunwald/chef-jacobine.git
   ref: master
-  sha: ad529f2122090de015c170cf1c263eb923cc4856
+  sha: babd4482640509b7fdb1d3564983951fc802e337
   specs:
-    jacobine (3.4.0)
+    jacobine (3.4.1)
       apache2 (>= 0.0.0)
       apt (>= 0.0.0)
       composer (>= 0.0.0)
       database (>= 0.0.0)
       dotdeb (>= 0.0.0)
+      git (>= 0.0.0)
       linguist (>= 0.0.0)
       logrotate (>= 0.0.0)
-      mysql (>= 0.0.0)
+      php (>= 0.0.0)
       supervisor (>= 0.0.0)
 
 GIT
   remote: https://github.com/ffuenf/chef-dotdeb
   ref: master
-  sha: 94367601fc2d1d4374f82abbbc60dae0049dca95
+  sha: e81dc7b46311eb1df07cf3fdbc6e65ce6c62abd8
   specs:
-    dotdeb (0.0.10)
+    dotdeb (1.0.0)
       apt (>= 0.0.0)
 
-GIT
-  remote: https://github.com/poise/supervisor
-  ref: master
-  sha: e21ca6ca14f71291c1a509ea18a3acd977026af0
-  specs:
-    supervisor (0.4.11)
-      python (>= 0.0.0)
-
 DEPENDENCIES
-  apt (>= 0)
-  build-essential (>= 0)
-  composer (>= 0)
+  apache2 (~> 1.7)
+  apt (~> 2.5.3)
+  build-essential (~> 2.0.6)
+  composer (~> 1.0.4)
   dotdeb (>= 0)
-  git (>= 0)
+  git (~> 4.0.2)
   grimoire (>= 0)
   jacobine (>= 0)
   linguist (>= 0)
-  mysql (>= 0)
-  php (>= 0)
-  python (>= 0)
-  rabbitmq (>= 0)
-  supervisor (>= 0)
-  vim (>= 0)
+  mysql (~> 5.4.4)
+  python (~> 1.4.6)
+  rabbitmq (~> 3.3.0)
+  vim (~> 1.1.2)
 

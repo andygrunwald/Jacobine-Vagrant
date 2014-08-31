@@ -273,6 +273,10 @@ node.deep_fetch('apache2', 'config', 'root') => node['apache2']['config']['root'
 - `redhat_enterprise_linux?`
 - `scientific_linux?`
 - `ubuntu?`
+- `solaris2?`
+- `aix?`
+- `smartos?`
+- `omnios?`
 
 There are also a series of dynamically defined matchers that map named operating system release versions and comparison operators in the form "#{platform}\_#{operator}\_#{name}?". For example:
 
@@ -371,6 +375,17 @@ log "Skipping git install, version is at #{version_for('mongo', '-v')}"
 ```ruby
 http_request 'http://...' do
   not_if { vagrant? }
+end
+```
+
+### Virtualization
+- `lxc?`
+
+#### Examples
+```ruby
+service 'ntpd' do
+  action [:enable, :start]
+  not_if { lxc? }
 end
 ```
 

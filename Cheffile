@@ -1,35 +1,42 @@
 #!/usr/bin/env ruby
 #^syntax detection
 
-site 'http://community.opscode.com/api/v1'
+site 'https://supermarket.getchef.com/api/v1'
 
 # Role: base
-cookbook 'apt'
-cookbook 'build-essential'
-cookbook 'git'
-cookbook 'vim'
+cookbook 'apt', '~> 2.5.3'
+cookbook 'build-essential', '~> 2.0.6'
+cookbook 'git', '~> 4.0.2'
+cookbook 'vim', '~> 1.1.2'
 
 
 # Role: web
-cookbook 'python'
-cookbook 'mysql'
+cookbook 'python', '~> 1.4.6'
+cookbook 'mysql', '~> 5.4.4'
 cookbook 'dotdeb',
-	:git => "https://github.com/ffuenf/chef-dotdeb",
-	:ref => "master"
+	:git => 'https://github.com/ffuenf/chef-dotdeb',
+	:ref => 'master'
 
-cookbook 'composer'
+cookbook 'composer', '~> 1.0.4'
 
 
 # Role: application
-cookbook 'rabbitmq'
-cookbook "jacobine",
-	:git => "https://github.com/andygrunwald/chef-jacobine.git",
-	:ref => "master"
+cookbook 'rabbitmq', '~> 3.3.0'
+cookbook 'jacobine',
+	:git => 'https://github.com/andygrunwald/chef-jacobine.git',
+	:ref => 'master'
 
-cookbook "grimoire",
-	:git => "https://github.com/andygrunwald/chef-grimoire",
-	:ref => "master"
+cookbook 'grimoire',
+	:git => 'https://github.com/andygrunwald/chef-grimoire',
+	:ref => 'master'
 
-cookbook "linguist",
-	:git => "https://github.com/andygrunwald/chef-github-linguist",
-	:ref => "master"
+cookbook 'linguist',
+	:git => 'https://github.com/andygrunwald/chef-github-linguist',
+	:ref => 'master'
+
+
+# Bugfixing area
+# To set apache2 cookbook to this version prevent a recursive loop during installation of librarian cookbooks
+# There is a cookbook which does not work with apache2 >2.0, so i fixed it at <= 1.x
+# Currently this is fine for me, because it works :)
+cookbook 'apache2', '~> 1.7'

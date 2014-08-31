@@ -35,6 +35,7 @@ directory node['supervisor']['dir'] do
   owner "root"
   group "root"
   mode "755"
+  recursive true
 end
 
 template node['supervisor']['conffile'] do
@@ -49,6 +50,7 @@ template node['supervisor']['conffile'] do
     :supervisord_minfds => node['supervisor']['minfds'],
     :supervisord_minprocs => node['supervisor']['minprocs'],
     :supervisor_version => node['supervisor']['version'],
+    :socket_file => node['supervisor']['socket_file'],
   })
 end
 

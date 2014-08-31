@@ -4,7 +4,7 @@ maintainer_email  'cookbooks@opscode.com'
 license           'Apache 2.0'
 description       'Installs and configures all aspects of apache2 using Debian style symlinks with helper definitions'
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           '1.10.4'
+version           '1.11.0'
 recipe            'apache2', 'Main Apache configuration'
 recipe            'apache2::logrotate', 'Rotate apache2 logs. Requires logrotate cookbook'
 recipe            'apache2::mod_alias', 'Apache module "alias" with config file'
@@ -49,6 +49,9 @@ recipe            'apache2::mod_status', 'Apache module "status" with config fil
 recipe            'apache2::mod_xsendfile', 'Apache module "xsendfile"'
 
 depends 'iptables'
+depends 'logrotate'
+depends 'pacman'
+depends 'freebsd'
 
 supports 'amazon'
 supports 'arch'
@@ -59,9 +62,6 @@ supports 'freebsd'
 supports 'redhat'
 supports 'scientific'
 supports 'ubuntu'
-
-depends 'logrotate'
-depends 'pacman'
 
 attribute 'apache',
           :display_name => 'Apache Hash',

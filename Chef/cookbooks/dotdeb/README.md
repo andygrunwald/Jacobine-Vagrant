@@ -1,39 +1,69 @@
-Description
-===========
+dotdeb
+======
+[![GitHub tag](http://img.shields.io/github/tag/ffuenf/chef-dotdeb.svg)][tag]
+[![Build Status](http://img.shields.io/travis/ffuenf/chef-dotdeb.svg)][travis]
+[![Gittip](http://img.shields.io/gittip/arosenhagen.svg)][gittip]
 
-Installs apt repositories of [dotdeb](http://www.dotdeb.org/instructions/)
+[tag]: https://github.com/ffuenf/chef-dotdeb/tags
+[travis]: https://travis-ci.org/ffuenf/chef-dotdeb
+[gittip]: https://www.gittip.com/arosenhagen
 
-Requirements
-============
+dotdeb installs apt repositories of [dotdeb](http://www.dotdeb.org/instructions/)
 
-Platform
---------
+Dependencies
+------------
 
-* Debian
-
-Cookbooks
----------
+This cookbook depends on the following community cookbooks.
 
 * apt (leverages apt_repository LWRP)
 
 The `apt_repository` LWRP is used from this cookbook to create the proper repository entries.
 
-Attributes
-==========
+Platform
+--------
 
-* `node['dotdeb']['php54']` - whether PHP 5.4 repository should be used
+The following platforms are supported and tested:
 
-Usage
-=====
+* Debian 6.x
+* Debian 7.x
 
-Simply include the recipe where you want the repositories to be used.
+Development
+-----------
+1. Fork the repository from GitHub.
+2. Clone your fork to your local machine:
+
+        $ git clone git@github.com:USER/chef-dotdeb.git
+
+3. Create a git branch
+
+        $ git checkout -b my_bug_fix
+
+4. **Write tests**
+5. Make your changes/patches/fixes, committing appropriately
+6. Run the tests: `foodcritic`, `rubocop`, `kitchen test`
+7. Push your changes to GitHub
+8. Open a Pull Request
+
+Testing
+-------
+
+chef-dotdeb is on [Travis CI](http://travis-ci.org/ffuenf/chef-dotdeb) which tests against multiple Chef and Ruby versions.
+
+The following Rake tasks are provided for automated testing of the cookbook:
+
+* `rake rubocop` - Run [RuboCop] style and lint checks
+* `rake foodcritic` - Run [Foodcritic] lint checks
+* `rake integration` - Run [Test Kitchen] integration tests (provisions a
+  Vagrant VM using this cookbook and then tests the infrastructure with
+  [Serverspec])
+* `rake test` - Run all tests
 
 License and Author
-==================
+------------------
 
-Author:: Achim Rosenhagen (<a.rosenhagen@ffuenf.de>)
+- Author:: Achim Rosenhagen (<a.rosenhagen@ffuenf.de>)
 
-Copyright:: 2013, Achim Rosenhagen
+- Copyright:: 2014, ffuenf
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
