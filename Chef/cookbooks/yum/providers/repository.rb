@@ -43,7 +43,7 @@ action :create  do
     else
       source new_resource.source
     end
-    mode '0644'
+    mode new_resource.mode
     variables(:config => new_resource)
     if new_resource.make_cache
       notifies :run, "execute[yum-makecache-#{new_resource.repositoryid}]", :immediately
@@ -80,6 +80,18 @@ action :delete do
   ruby_block "yum-cache-reload-#{new_resource.repositoryid}" do
     block { Chef::Provider::Package::Yum::YumCache.instance.reload }
     action :nothing
+  end
+end
+
+action :makecache do
+  execute "yum-makecache-#{new_resource.repositoryid}" do
+    command "yum -q makecache --disablerepo=* --enablerepo=#{new_resource.repositoryid}"
+    action :run
+  end
+
+  ruby_block "yum-cache-reload-#{new_resource.repositoryid}" do
+    block { Chef::Provider::Package::Yum::YumCache.instance.reload }
+    action :run
   end
 end
 
