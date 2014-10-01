@@ -35,13 +35,22 @@ database_user node[:jacobine][:mysql_user][:username] do
 end
 
 # Grant access to new MySQL user for analysis
-database_user node[:jacobine][:mysql_user][:username] do
-	connection mysql_connection_info
-	password node[:jacobine][:mysql_user][:password]
-	provider Chef::Provider::Database::MysqlUser
-	database_name node[:jacobine][:mysql_user][:database]
-	privileges [:select,:update,:insert,:alter,:create,:delete,:drop,"CREATE VIEW"]
-	action :grant
+databases = node[:jacobine][:mysql_user][:databases]
+databases.each do |database|
+	database database do
+		connection mysql_connection_info
+		provider Chef::Provider::Database::Mysql
+		action :create
+	end
+
+	database_user node[:jacobine][:mysql_user][:username] do
+		connection mysql_connection_info
+		password node[:jacobine][:mysql_user][:password]
+		provider Chef::Provider::Database::MysqlUser
+		database_name database
+		privileges [:select,:update,:insert,:alter,:create,:delete,:drop,"CREATE VIEW", "Index"]
+		action :grant
+	end
 end
 
 # Create website database

@@ -48,7 +48,7 @@ default[:jacobine][:mysql_root][:password] = ""
 
 default[:jacobine][:mysql_user][:username] = "jacobine"
 default[:jacobine][:mysql_user][:password] = "jacobine"
-default[:jacobine][:mysql_user][:database] = "jacobine"
+default[:jacobine][:mysql_user][:databases] = ["jacobine", "jacobine_mlstats"]
 
 # Gerrie settings
 default[:jacobine][:gerrie_dir] = "/var/www/analysis/vendor/andygrunwald/gerrie"
