@@ -8,11 +8,6 @@ run_list "recipe[python]",
 		 "recipe[composer]"
 
 override_attributes(
-	:languages => {
-		:ruby => {
-			:default_version => '1.8'
-		}
-	},
 	:mysql => {
 		:remove_test_database => true,
 		:remove_anonymous_users => false,
