@@ -109,9 +109,9 @@ GIT
 GIT
   remote: https://github.com/andygrunwald/chef-jacobine.git
   ref: master
-  sha: a6b3c6910db645cfa8b153345dc01dc07b6e27e6
+  sha: 2217319fe2593b76420f228a9ff6db5b105b411f
   specs:
-    jacobine (3.5.0)
+    jacobine (3.5.1)
       apache2 (>= 0.0.0)
       apt (>= 0.0.0)
       composer (>= 0.0.0)

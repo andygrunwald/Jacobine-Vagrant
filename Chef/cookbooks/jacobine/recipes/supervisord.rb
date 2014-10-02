@@ -37,3 +37,8 @@ supervisordConfig.each do |config|
 		action :enable
 	end
 end
+
+# Restart the service
+service "supervisor" do
+  action :restart
+end
