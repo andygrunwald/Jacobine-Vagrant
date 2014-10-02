@@ -41,6 +41,8 @@ To use this project you have to install the listed requirements:
 * Login into the virtual machine (`vagrant ssh`)
 * Enjoy
 
+    The instance should be available under the IP-Address [192.168.33.55](http://192.168.33.55)
+
 ## Access to services in VM
 
 The login credentials for the used services
