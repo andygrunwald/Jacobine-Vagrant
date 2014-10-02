@@ -4,7 +4,7 @@ description "The web role. Installs the required web stack"
 run_list "recipe[python]",
 		 "recipe[mysql::server]",
 		 "recipe[mysql::client]",
-		 "recipe[jacobine::php]",
+		 "recipe[jacobine::dotdeb-php]",
 		 "recipe[composer]"
 
 override_attributes(
@@ -26,9 +26,7 @@ override_attributes(
 		}
 	},
 	:dotdeb => {
-		:php55 => true,
-		:uri => "http://packages.dotdeb.org",
-		'distribution' => 'wheezy'
+		:php55 => true
 	},
 	:php => {
 		:packages => ['php5', 'php5-dev', 'php5-cli', 'php-pear', 'php5-mysql', 'php5-curl'],

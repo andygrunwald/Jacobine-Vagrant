@@ -70,6 +70,9 @@ default[:jacobine][:analysis][:shell] = "/bin/false"
 default[:jacobine][:supervisord][:user] = "analysis"
 default[:jacobine][:supervisord][:processes] = []
 
+# Ruby
+default[:jacobine][:ruby][:package] = "ruby1.9.3"
+
 # Cron
 default[:jacobine][:cron][:user] = "vagrant"
 default[:jacobine][:cron][:processes] = []

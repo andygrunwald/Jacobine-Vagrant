@@ -13,7 +13,7 @@ run_list "recipe[supervisor]",
 		 "recipe[jacobine::logrotate]",
 		 "recipe[grimoire::cvsanaly]",
 		 "recipe[grimoire::mlstats]",
-		 "recipe[linguist]"
+		 "recipe[jacobine::github-linguist]"
 
 override_attributes(
 	:supervisor => {
@@ -41,7 +41,6 @@ override_attributes(
 	:jacobine => {
 		:supervisord => {
 			:processes => [
-
 				# Consumer: Download\\Git
 				{
 					:name => "consumer-download-git",
@@ -231,9 +230,5 @@ override_attributes(
 		:mlstats => {
 			:destination => '/var/www/analysis/tools/MetricsGrimoire/MLStats'
 		},
-	},
-	:linguist => {
-		:install_method => "source",
-		:path => "/var/www/analysis/tools/github-linguist"
 	}
 )

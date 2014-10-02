@@ -1,4 +1,5 @@
 node.default['dotdeb']['uri'] = "http://packages.dotdeb.org"
+node.default['dotdeb']['gpg-key'] = "dotdeb.gpg"
 node.default['dotdeb']['distribution'] = node['lsb']['codename']
 
 #(Optional) if you want to install PHP 5.4, set the following variable to true:
