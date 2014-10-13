@@ -5,14 +5,12 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "chef/debian-7.4"
-
   config.vm.hostname = 'jacobine'
-
   config.vm.network :private_network, ip: "192.168.33.55"
-
   config.vm.synced_folder "Application", "/var/www/analysis"
 
   config.vm.provider "virtualbox" do |v|
+    v.name = "Jacobine"
     v.memory = 1024
   end
 
