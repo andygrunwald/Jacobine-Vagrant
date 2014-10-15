@@ -1,5 +1,7 @@
 # Jacobine (Vagrant setup)
 
+[![Documentation Status](https://readthedocs.org/projects/jacobine-vagrant/badge/?version=latest)](https://readthedocs.org/projects/jacobine-vagrant/?badge=latest)
+
 This is a [Vagrant](http://www.vagrantup.com/) setup for the [Jacobine](https://github.com/andygrunwald/Jacobine) project.
 
 The full application and library stack is bundled into a easy to use virtual machine.
